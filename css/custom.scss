@@ -1,0 +1,122 @@
+button:focus {outline:0;}
+
+body {
+  background-color: #F7776F;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.intro-01 {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+  }
+}
+
+.toolTopBox {
+  transition: all 0.5s;
+  height: 100px;
+  width: 100vw;
+  background: #fff;
+  position: fixed;
+  top: -120px;
+  left: 0;
+  right: 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  &.on {
+    top: 0;
+  }
+}
+
+.img-item {
+  width: 90px;
+  height: 90px;
+  background-size: cover;
+  background-position: center;
+  margin: 5px 5px;
+  float: left;
+}
+
+.toolBottomBox {
+  transition: all 0.5s;
+  height: 80px;
+  width: 100vw;
+  background: #fff;
+  position: fixed;
+  bottom: -80px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  &.on {
+    bottom: 0;
+  }
+}
+.toolBottomBoxInside {
+  min-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  @media (min-width: 478px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .buttonTool {
+    @media (min-width: 478px) {
+      height: 40px;
+      padding: 0 20px;
+    }
+  }
+}
+
+.buttonTool {
+  background: #F7776F;
+  color: #FFF;
+  border-radius: 15px;
+  border: 0;
+  height: 30px;
+  text-align: center;
+  padding: 0 15px;
+  float: left;
+  display: flex;
+  align-items: center;
+  margin: 3px 5px;
+  &.green {
+    background-color: #2ECC71;
+    float: right;
+  }
+}
+
+.buttonWhite {
+  background: #FFF;
+  color: #F7776F;
+  border-radius: 25px;
+  border: 0;
+  height: 50px;
+  width: 200px;
+  text-align: center;
+}
+
+.custom-box {
+  overflow: hidden;
+}
+
+.canvasWrapper {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding-top: 10px;
+}
