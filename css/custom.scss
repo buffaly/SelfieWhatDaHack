@@ -19,11 +19,16 @@ body {
     width: 100%;
     text-align: center;
     font-size: 40px;
-    &:first-child {
+    margin: 10px 0;
+    &.underline {
       padding: 10px;
       font-size: 8vh;
       margin: 0;
     }
+  }
+  div {
+    text-align: center;
+    color: #fff;
   }
 }
 

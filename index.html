@@ -9,11 +9,18 @@
     <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+
+    <meta property="og:url"                content="http://whatdahack.com" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="Whar Da Hack : Selfie with us" />
+    <meta property="og:description"        content="ถ่ายรูปเซลฟี่กับคนดัง ทุกที่ ทุกเวลา~ (โปรเจคนี้จัดทำขึ้นเพื่อการศึกษา และความสนุกเท่านั้น โปรดใช้วิจารณญาณในการใช้งาน)" />
+    <meta property="og:image"              content="http://whatdahack.me/images/selfieWhatDaHack2018.png" />
+
   </head>
 
 <script type="text/javascript">
   var imgStupid = [];
-  var imageLength = 12;
+  var imageLength = 19;
   for(var i=1; i<=imageLength ; i++) {
     imgStupid.push('/images/stupidArt/'+i+'.png');
   }
@@ -22,8 +29,14 @@
   <body>
 
     <div class="intro-01">
-        <h1 style="background-color: #fff; color: #F7776F">SELFIE</h1>
-        <h1 style="margin-top: 10px; font-size: 8vh;">WHAT DA HACK</h1>
+        <img src="/images/home.jpg" width="95%" style="margin-top: -20vh;max-width: 100vh;" />
+        <h1 class="underline" style="background-color: #fff; color: #F7776F">
+          Selfie with us
+        </h1>
+        <h1 style="margin-top: 10px; font-size: 8vh;">WhatDaHack.me</h1>
+        <div>โปรเจคนี้จัดทำขึ้นเพื่อการศึกษา และความสนุกเท่านั้น<br/>
+          ไม่มีส่วนเกี่ยวข้องกับรูปภาพที่เกิดจากการใช้งาน โปรดใช้วิจารณญาณในการใช้งาน
+        </div>
         <br/>
         <input style="display: none;" type="file" id="mainImageSelect" accept="image/*" />
         <button class="buttonWhite" onclick="selectMainImage()">
