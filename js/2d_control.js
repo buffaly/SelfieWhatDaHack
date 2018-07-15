@@ -33,7 +33,6 @@ function ini_canvas_2d(backgroundImage) {
             canvas_2d.overlayImage.height = canvas_2d.width  / 4;
             canvas_2d.overlayImage.top = canvas_2d.height - (canvas_2d.width  / 4);
             canvas_2d.overlayImage.left = canvas_2d.width - (canvas_2d.width  / 4);
-            console.log('canvas_2d.overlayImage', canvas_2d.overlayImage);
             canvas_2d.renderAll();
         });
 
@@ -98,26 +97,6 @@ function insertImgWithUrl(url) {
     }, { crossOrigin: 'anonymous' });
 
 }
-
-
-// var imageLoader = document.getElementById('imageLoader');
-// imageLoader.addEventListener('change', handleImage, false);
-
-// function handleImage(e) {
-//   var reader = new FileReader();
-//   reader.onload = function(event) {
-//     var img = new Image();
-//     img.onload = function() {
-//       var imgInstance = new fabric.Image(img, {
-//         scaleX: 0.1,
-//         scaleY: 0.1
-//       })
-//       canvas_2d.add(imgInstance);
-//     }
-//     img.src = event.target.result;
-//   }
-//   reader.readAsDataURL(e.target.files[0]);
-// }
 
 
 
@@ -231,10 +210,12 @@ document.getElementById('lnkDownload').addEventListener('click', function() {
         format: 'jpeg',
         quality: 0.8
       });
-
-    var url = dataURL.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
-    window.open(url);
-
+    var link = document.createElement('a');
+    var fileName = new Date().toISOString();
+    link.download = fileName + '.jpeg';
+    link.href = dataURL;
+    link.click();
+    // window.open(dataURL);
 }, false);
 
 var downloadCanvas = function(link, filename) {
@@ -341,7 +322,6 @@ function save() {
 function replay(playStack, saveStack, buttonsOn, buttonsOff) {
     saveStack.push(state);
     state = playStack.pop();
-    console.log(JSON.parse(state));
     buttonsOn = false;
     buttonsOff = false;
     canvas_2d.clear();
